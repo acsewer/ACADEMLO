@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+* {
+  padding: 0px;
+  box-sizing: border-box;
+  margin: 0px;
+}
+body {
+  font-family: Lato, "sans-serif";
+}
+
+.row {
+  display: grid;
+  gap: 0px;
+  grid-template-columns: repeat(1, 3fr);
+  grid-auto-rows: minmax(auto, auto);
+  width: 100%;
+}
+.col-1 {
+  grid-column: 1fr;
+  grid-row: 1;
+}
+.col-2 {
+  grid-column: 2fr;
+  grid-row: 1;
+}
+.col-3 {
+  grid-column: 3fr;
+  grid-row: 1;
+}
+.col-4 {
+  grid-column: 4fr;
+  grid-row: 1;
+}
+.col-5 {
+  grid-column: 5fr;
+  grid-row: 1;
+}
+.col-6 {
+  grid-column: 6fr;
+  grid-row: 1;
+}
+.col-7 {
+  grid-column: 7fr;
+  grid-row: 1;
+}
+.col-8 {
+  grid-column: 8fr;
+  grid-row: 1;
+}
+.col-9 {
+  grid-column: 9fr;
+  grid-row: 1;
+}
+.col-10 {
+  grid-column: 10fr;
+  grid-row: 1;
+}
+.col-11 {
+  grid-column: 11fr;
+  grid-row: 1;
+}
+.col-12 {
+  grid-column: 12fr;
+  grid-row: 1;
+}
+
+.header {
+  height: 10vh;
+  padding: 10px;
+}
+.bg-test {
+  background-color: aqua;
+}
+.bg-test-1 {
+  background-color: rgb(225, 0, 255);
+}
+
+.card-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 160px;
+  border: 1px solid rgba(0, 0, 0, 0.351);
+  margin: 10px;
+}
+.card-wrapper .header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 20px;
+}
+
+.header button {
+  align-items: flex-end;
+  justify-self: end;
+  align-self: flex-end;
+}
+.card-wrapper .divider {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  width: 90%;
+  margin: 5px;
+  height: 0.8px;
+  border-top: 0.5px solid rgba(132, 129, 129, 0.345);
+}
+.card-wrapper .content {
+  display: flex;
+  width: 100%;
+  text-align: start;
+  align-items: flex-start;
+  padding: 5px;
+}
+
+.display {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100%;
+}
+
+/* MODAL */
+#modal-overlay {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.7);
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+#modal-overlay #modal {
+  max-width: 650px;
+  width: 100%;
+  background: white;
+  height: 400px;
+}
