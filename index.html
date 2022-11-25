@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google Fonts Pre Connect -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!-- Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Fonts Links (Roboto 400, 500 and 700 included) -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+    />
+
+    <!-- CSS Files Links -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!-- Title -->
+    <title>Academlo, Ariel Cordova</title>
+  </head>
+  <body>
+    <div id="modal-overlay">
+      <div id="modal">
+        <form id="crearTaskForm">
+          <label for="fname"></label>
+          <input type="text" id="fname" name="fname" placeholder="Nombre" />
+          <br /><br />
+          <label for="fdescrp"></label>
+          <input
+            type="text"
+            id="fdescrp"
+            name="fdescrp"
+            placeholder="Descripcion"
+          />
+          <input type="button" onclick="createTaskBtn()" value="Crear" />
+          <input type="button" onclick="closeModalNewTask()" value="Cancelar" />
+        </form>
+      </div>
+    </div>
+
+    <div class="row header">
+      <div class="col-11"></div>
+      <div class="col-1">login</div>
+    </div>
+    <div class="row header">
+      <div class="col-12"></div>
+      <div class="col-3">
+        <input type="text" id="fname" name="fname" placeholder="Buscar" />
+        <button type="button" id="open-modal">+ Crear nueva tarea</button>
+      </div>
+    </div>
+    <br />
+    <div class="display" id="cardContiner">
+      <template id="card-template">
+        <div class="card-wrapper">
+          <div class="header">
+            <h2>Title</h2>
+            
+            <button class="btn-delete">Eliminar</button>
+            <button class="btn-update">Actualizar</button>
+          </div>
+          <div class="divider">
+            <hr />
+          </div>
+          <div class="content">
+            <p>Descripcion</p>
+          </div>
+        </div>
+      </template>
+    </div>
+
+    <script src="./assets/js/scripts.js"></script>
+  </body>
+</html>
