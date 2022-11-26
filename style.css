@@ -4,10 +4,32 @@
   box-sizing: border-box;
   margin: 0px;
 }
+
 body {
   font-family: Lato, "sans-serif";
 }
 
+
+
+h1{
+  position: absolute;
+  left: 110px;
+  top: 60px;
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  border-radius: 2px;
+  background-color: rgba(0, 255, 4, 0.368);
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  background-color: rgba(8, 147, 10, 0.404);
+}
+.w-100{
+  width: 100%;
+}
 .row {
   display: grid;
   gap: 0px;
@@ -15,6 +37,7 @@ body {
   grid-auto-rows: minmax(auto, auto);
   width: 100%;
 }
+
 .col-1 {
   grid-column: 1fr;
   grid-row: 1;
@@ -65,7 +88,6 @@ body {
 }
 
 .header {
-  height: 10vh;
   padding: 10px;
 }
 .bg-test {
@@ -79,9 +101,9 @@ body {
   display: flex;
   flex-direction: column;
   width: 300px;
-  height: 160px;
-  border: 1px solid rgba(0, 0, 0, 0.351);
   margin: 10px;
+  padding-bottom: 0px;
+  box-shadow: 2px 2px 10px 0.5px rgba(0, 0, 0, 0.138);
 }
 .card-wrapper .header {
   display: flex;
@@ -106,18 +128,23 @@ body {
   border-top: 0.5px solid rgba(132, 129, 129, 0.345);
 }
 .card-wrapper .content {
-  display: flex;
   width: 100%;
   text-align: start;
   align-items: flex-start;
   padding: 5px;
 }
 
+.content p{
+  margin-left: 10px;
+  font-weight: 300;
+}
+
 .display {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  width: 100%;
+  width: 80vw;
+  margin-left: 10vw;
 }
 
 /* MODAL */
@@ -125,14 +152,136 @@ body {
   width: 100%;
   height: 100vh;
   position: absolute;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(255, 255, 255, 0.689);
   align-items: center;
   justify-content: center;
   display: none;
 }
 #modal-overlay #modal {
-  max-width: 650px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  max-width: 400px;
   width: 100%;
   background: white;
   height: 400px;
+  box-shadow: 2px 2px 20px 0.5px rgba(0, 0, 0, 0.138);
+
+}
+#modal input[type=text]{
+  margin-top: 10px;
+  width: 100%;
+}
+
+#modal input[type=button]{
+  margin-top: 40px;
+  width: 40%;
+  font-size: 1.0rem;
+}
+#cancelarBtnId{
+  background-color: rgb(235, 229, 229);
+  color: black;
+  margin-right: 65px;
+  cursor: pointer;
+}
+
+label{
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+#modal h3{
+  margin-bottom: 20px;
+}
+
+.btn {
+  padding: 15px;
+  border-radius: 5px;
+  background-color: rgb(39, 167, 39);
+  font-weight: 400;
+  border: 0px;
+  font-size: 0.8rem;
+  color: white;
+  cursor: pointer;
+}
+
+input[type="text"] {
+  padding: 15px;
+  border-radius: 3px;
+  border: 1px solid rgb(118, 115, 115);
+  background-color: rgba(39, 167, 39, 0.022);
+}
+
+input[type="text"]:focus {
+  border: 1px solid rgb(118, 115, 115);
+  box-shadow: 2px 2px 10px 1px rgba(39, 167, 39, 0.555);
+}
+.icon {
+  padding: 10px;
+  background-color: transparent;
+  border: 0px;
+  cursor: pointer;
+}
+
+.aling-end {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+}
+.aling-end object{
+  cursor: pointer;
+}
+.aling-end img{
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+.estados{
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.427);
+  color: rgb(96, 95, 95);
+  border-radius: 2px;
+}
+option{
+  padding: 10px;
+}
+.barra{
+  width: 100%;
+  height: 3px;
+  margin-top: 25px;
+  margin-bottom: 0px;
+  background-color: white;
+}
+
+.barra-st-1{
+  background-color: #09b6e7;
+}
+.barra-st-2{
+  background-color: #e76209;
+}
+.barra-st-3{
+  background-color: #62e709;
+}
+.btn-delete{
+  width: 20px;
+  height: 20px;
+  display: block;
+  margin: 4px;
+  cursor: pointer;
+}
+.btn-update{
+  width: 20px;
+  height: 20px;
+  display: block;
+  margin: 4px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.login-img{
+  margin-top: 10px;
+  margin-right: 5px;
+}
+.login-txt{
+  margin-top: 10px;
+  margin-right: 2px;
 }

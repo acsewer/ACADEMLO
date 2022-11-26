@@ -19,54 +19,109 @@
     <link rel="stylesheet" href="./style.css" />
 
     <!-- Title -->
-    <title>Academlo, Ariel Cordova</title>
+    <title>Tareas</title>
+    <link rel="icon" href="./logo.jpg">
   </head>
   <body>
+    <h1>Tareas</h1>
     <div id="modal-overlay">
       <div id="modal">
+        <div class="aling-end">
+          <img src="./x 2.svg" alt="" id="exitModal" />
+        </div>
+
         <form id="crearTaskForm">
-          <label for="fname"></label>
+          <h3>Editar tarea</h3>
+          <label for="fname" class="label">Nombre de la tarea</label>
           <input type="text" id="fname" name="fname" placeholder="Nombre" />
           <br /><br />
-          <label for="fdescrp"></label>
+          <label for="fdescrp" class="label">Descripción</label>
           <input
             type="text"
             id="fdescrp"
             name="fdescrp"
             placeholder="Descripcion"
           />
-          <input type="button" onclick="createTaskBtn()" value="Crear" />
-          <input type="button" onclick="closeModalNewTask()" value="Cancelar" />
+
+          <input
+            type="button"
+            id="cancelarBtnId"
+            class="btn"
+            onclick="closeModalNewTask()"
+            value="Cancelar"
+          />
+          <input
+            id="crearBtnId"
+            type="button"
+            onclick="createTaskBtn()"
+            value="Crear"
+            class="btn"
+          />
         </form>
       </div>
     </div>
 
-    <div class="row header">
-      <div class="col-11"></div>
-      <div class="col-1">login</div>
+    <div class="aling-end">
+      <img src="./log1.png" alt="" srcset="" class="login-img" />
+      <p id = "txtLoginID" class="login-txt">Por favor, inicie sessión</p>
     </div>
     <div class="row header">
       <div class="col-12"></div>
       <div class="col-3">
-        <input type="text" id="fname" name="fname" placeholder="Buscar" />
-        <button type="button" id="open-modal">+ Crear nueva tarea</button>
+        <input
+          type="text"
+          id="buscarId"
+          name="buscarId"
+          placeholder="Buscar (id)"
+        />
+        <button type="button" id="open-modal" class="btn">
+          + Crear nueva tarea
+        </button>
       </div>
     </div>
     <br />
     <div class="display" id="cardContiner">
       <template id="card-template">
         <div class="card-wrapper">
+          <div class="aling-end">
+            <img
+              id="Eliminar"
+              src="./delete.png"
+              alt=""
+              srcset=""
+              class="btn-delete"
+            />
+          </div>
+
           <div class="header">
             <h2>Title</h2>
-            
-            <button class="btn-delete">Eliminar</button>
-            <button class="btn-update">Actualizar</button>
+
+            <img
+              id="Actualizar"
+              src="./edit-2 1.svg"
+              alt=""
+              srcset=""
+              class="btn-update"
+            />
           </div>
           <div class="divider">
             <hr />
           </div>
           <div class="content">
+            <small> Descripcion: </small>
+            <br />
+            <br />
             <p>Descripcion</p>
+            <br /><br /><br />
+
+            <select name="estados" class="estados" id="est">
+              <option value="0"></option>
+              <option value="1">Iniciada</option>
+              <option value="2">Pausa</option>
+              <option value="3">Terminada</option>
+            </select>
+            <p id="estado">Estado</p>
+            <div id="barra" class="barra"></div>
           </div>
         </div>
       </template>
